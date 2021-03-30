@@ -1,0 +1,3 @@
+## Thirsy 🤙
+
+Google Meet Alternative 🤙
