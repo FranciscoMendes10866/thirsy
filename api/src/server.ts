@@ -8,6 +8,7 @@ const io = new Server(5000, {
     methods: ['GET', 'POST']
   }
 })
+
 const pubClient = new Redis()
 const subClient = pubClient.duplicate()
 
@@ -21,12 +22,11 @@ io.on('connection', (socket) => {
   })
 
   socket.on('callUser', (data) => {
-    io
-      .to(data.userToCall)
-      .emit(
-        'callUser',
-        { signal: data.signalData, from: data.from, name: data.name }
-      )
+    io.to(data.userToCall).emit('callUser', {
+      signal: data.signalData,
+      from: data.from,
+      name: data.name
+    })
   })
 
   socket.on('answerCall', (data) => {

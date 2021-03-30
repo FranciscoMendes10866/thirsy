@@ -132,7 +132,7 @@ const App = () => {
       >
         <CopyToClipboard text={me}>
           <IconButton aria-label="copy" color="primary">
-            <AssignmentIcon />
+            <AssignmentIcon fontSize="large" />
           </IconButton>
         </CopyToClipboard>
       </div>
