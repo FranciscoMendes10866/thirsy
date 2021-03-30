@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ES2018",
+        "lib": [
+            "ES2018"
+        ],
+        "allowJs": true,
+        "outDir": "./build",
+        "rootDir": "./src",
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "paths": {
+            "@providers/*": [
+                "./src/providers/*"
+            ],
+            "@functions/*": [
+                "./src/functions/*"
+            ],
+            "@utils/*": [
+                "./src/utils/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
