@@ -4,7 +4,7 @@ import Redis from 'ioredis'
 
 const io = new Server(5000, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: '*',
     methods: ['GET', 'POST']
   }
 })
